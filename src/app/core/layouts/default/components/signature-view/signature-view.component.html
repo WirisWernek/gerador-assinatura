@@ -1,0 +1,10 @@
+<nz-card style="width: 500px">
+  <nz-avatar [nzShape]="settingsForm.get('pictureShape')?.value" [nzSize]="64" nzIcon="user"></nz-avatar>
+  <p>{{ dataForm.get("nome")?.value }}</p>
+  <p>{{ dataForm.get("email")?.value }}</p>
+  <p>{{ dataForm.get("cargo")?.value }}</p>
+  <p>{{ dataForm.get("departamento")?.value }}</p>
+  <p>{{ dataForm.get("telefone")?.value }}</p>
+  <p>{{ dataForm.get("empresa")?.value }}</p>
+  <p>{{ dataForm.get("site")?.value }}</p>
+</nz-card>

@@ -1,0 +1,176 @@
+<nz-steps [nzCurrent]="current" nzSize="small">
+  <nz-step></nz-step>
+  <nz-step></nz-step>
+  <nz-step></nz-step>
+  <nz-step></nz-step>
+</nz-steps>
+
+@switch (current) {
+	@case (0) {
+		<form nz-form [formGroup]="dataForm" class="ant-form ant-form-horizontal">
+			<h2>Digite seus dados pessoais</h2>
+
+			<div>
+				<label for="Nome">Nome</label>
+				<input nz-input placeholder="Digite seu nome" formControlName="nome" nzSize="large" />
+			</div>
+			<div>
+				<label for="Nome">Email</label>
+				<input nz-input placeholder="Digite seu email" formControlName="email" nzSize="large" />
+			</div>
+			<div>
+				<label for="Nome">Cargo</label>
+				<input nz-input placeholder="Digite seu cargo" formControlName="cargo" nzSize="large" />
+			</div>
+			<div>
+				<label for="Nome">Departamento</label>
+				<input nz-input placeholder="Digite seu departamento" formControlName="departamento" nzSize="large" />
+			</div>
+			<div>
+				<label for="Nome">Telefone</label>
+				<input nz-input placeholder="Digite seu telefone" formControlName="telefone" nzSize="large" />
+			</div>
+			<div>
+				<label for="Nome">Empresa</label>
+				<input nz-input placeholder="Digite sua empresa" formControlName="empresa" nzSize="large" />
+			</div>
+			<div>
+				<label for="Nome">Site</label>
+				<input nz-input placeholder="Digite o site da sua empresa" formControlName="site" nzSize="large" />
+			</div>
+		</form>	
+	}
+	@case (1) {
+		<form nz-form [formGroup]="dataForm" class="ant-form ant-form-horizontal">
+			<h2>Digite suas redes sociais</h2>
+
+			<div>
+				<label for="Nome">Youtube</label>
+				<input nz-input placeholder="Digite seu nome" formControlName="youtube" nzSize="large" />
+			</div>
+			<div>
+				<label for="Nome">Facebook</label>
+				<input nz-input placeholder="Digite seu email" formControlName="facebook" nzSize="large" />
+			</div>
+			<div>
+				<label for="Nome">Instagram</label>
+				<input nz-input placeholder="Digite seu cargo" formControlName="instagram" nzSize="large" />
+			</div>
+			<div>
+				<label for="Nome">Twitter</label>
+				<input nz-input placeholder="Digite seu departamento" formControlName="twitter" nzSize="large" />
+			</div>
+			<div>
+				<label for="Nome">Linkedin</label>
+				<input nz-input placeholder="Digite seu telefone" formControlName="linkedin" nzSize="large" />
+			</div>
+			<div>
+				<label for="Nome">Portfólio</label>
+				<input nz-input placeholder="Digite sua empresa" formControlName="portfolio" nzSize="large" />
+			</div>
+			<div>
+				<label for="Nome">Github</label>
+				<input nz-input placeholder="Digite sua empresa" formControlName="github" nzSize="large" />
+			</div>
+		</form>
+	}
+	@case (2) {
+		<form nz-form [formGroup]="dataForm" class="ant-form ant-form-horizontal">
+			<h2>Adicione sua Foto</h2>
+			<div>
+				<label for="Nome">URL da foto</label>
+				<input nz-input placeholder="Digite seu nome" formControlName="profilePicture" nzSize="large" />
+			</div>
+			
+		</form>
+	}
+	@case (3) {
+		<form nz-form [formGroup]="settingsForm" class="ant-form ant-form-horizontal">
+			<h2>Selecione a formatação</h2>
+			
+			<div>
+				<label for="">Tema</label>
+				<nz-select formControlName="theme" [nzSize]="size">
+					@for (option of settingsOptions.theme; track option) {
+					  <nz-option [nzLabel]="option" [nzValue]="option"></nz-option>
+					}
+				  </nz-select>
+			</div>
+			<div>
+				<label for="">Fonte</label>
+				<nz-select formControlName="fontFamily" [nzSize]="size">
+					@for (option of settingsOptions.fontFamily; track option) {
+					  <nz-option [nzLabel]="option" [nzValue]="option"></nz-option>
+					}
+				  </nz-select>
+			</div>
+			<div>
+				<label for="">Espessura da fonte</label>
+				<nz-select formControlName="fontWeight" [nzSize]="size">
+					@for (option of settingsOptions.fontWeight; track option) {
+					  <nz-option [nzLabel]="option" [nzValue]="option"></nz-option>
+					}
+				  </nz-select>
+			</div>
+			<div>
+				<label for="">Estilo da Fonte</label>
+				<nz-select formControlName="fontStyle" [nzSize]="size">
+					@for (option of settingsOptions.fontStyle; track option) {
+					  <nz-option [nzLabel]="option" [nzValue]="option"></nz-option>
+					}
+				  </nz-select>
+			</div>
+			<div>
+				<label for="">Tamanho da Imagem</label>
+				<nz-select formControlName="pictureSize" [nzSize]="size">
+					@for (option of settingsOptions.pictureSize; track option) {
+					  <nz-option [nzLabel]="option" [nzValue]="option"></nz-option>
+					}
+				  </nz-select>
+			</div>
+			<div>
+				<label for="">Estilo da Imagem</label>
+				<nz-select formControlName="pictureShape" [nzSize]="size">
+					@for (option of settingsOptions.pictureShape; track option) {
+					  <nz-option [nzLabel]="option" [nzValue]="option"></nz-option>
+					}
+				  </nz-select>
+			</div>
+			<div>
+				<label for="">Borda com Curvatura</label>
+				<nz-switch formControlName="rounded"></nz-switch>
+			</div>
+			<div>
+				<label for="">Variação da Curvatura</label>
+				<nz-slider [nzMin]="1" [nzMax]="25" formControlName="roundedSize"></nz-slider>
+			</div>
+			<div>
+				<label for="">Sombra</label>
+				<nz-switch formControlName="shadow"></nz-switch>
+			</div>
+			<div>
+				<label for="color">Cor do texto</label>
+				<nz-color-picker formControlName="color" nzSize="large"></nz-color-picker>
+			</div>
+			
+		</form>
+	}
+}
+
+
+<div class="button-group">
+  <nz-button-group>
+	@if (current > 0) {
+		<button nz-button nzType="primary" (click)="back()">
+		  <nz-icon nzType="left" />
+		  Anterior
+		</button>
+	}
+	@if (current < 3 ) {
+		<button nz-button nzType="primary" (click)="next()">
+		  Próximo
+		  <nz-icon nzType="right" />
+		</button>
+	}
+  </nz-button-group>
+</div>
