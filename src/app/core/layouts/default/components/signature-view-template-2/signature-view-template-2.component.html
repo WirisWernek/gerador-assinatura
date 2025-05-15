@@ -1,0 +1,38 @@
+<nz-card>
+  <div>
+    <section class="signature-header">
+      <nz-avatar
+        [nzShape]="settingsForm.get('pictureShape')?.value"
+        [nzSize]="64"
+        nzIcon="user"
+      ></nz-avatar>
+      <div class="icons">
+        <nz-icon nzType="github" nzTheme="outline" />
+        <nz-icon nzType="youtube" nzTheme="fill" />
+        <nz-icon nzType="facebook" nzTheme="fill" />
+        <nz-icon nzType="instagram" nzTheme="fill" />
+        <nz-icon nzType="twitter" nzTheme="outline" />
+        <nz-icon nzType="linkedin" nzTheme="fill" />
+        <nz-icon nzType="link" nzTheme="outline" />
+      </div>
+    </section>
+
+    <nz-divider [nzType]="'vertical'"></nz-divider>
+
+    <section class="signature-body">
+      <p>{{ dataForm.get("nome")?.value }}</p>
+      <div>
+        <p>{{ dataForm.get("email")?.value }}</p>
+        <p>{{ dataForm.get("telefone")?.value }}</p>
+      </div>
+      <div>
+        <p>{{ dataForm.get("cargo")?.value }}</p>
+        <p>{{ dataForm.get("departamento")?.value }}</p>
+      </div>
+      <div>
+        <p>{{ dataForm.get("empresa")?.value }}</p>
+        <p>{{ dataForm.get("site")?.value }}</p>
+      </div>
+    </section>
+  </div>
+</nz-card>
